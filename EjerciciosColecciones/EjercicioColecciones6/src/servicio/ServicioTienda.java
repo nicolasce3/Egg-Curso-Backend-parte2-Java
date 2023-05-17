@@ -79,21 +79,22 @@ public class ServicioTienda {
         for (Map.Entry<String, Integer> entry : productos.entrySet()) {
             System.out.println("Producto =" + entry.getKey() + ", Precio =" + entry.getValue());
         }
-
+        
     }
 
-    public void eliminarProducto() {
+    public void modificarPrecio() {
         System.out.println("Ingrese el nombre del producto que desea modificar: ");
-        int modificar = leer.nextInt();
+        String modificar = leer.next();
         for (Map.Entry<String, Integer> entry : productos.entrySet()) {
-            if (productos.equals(modificar)){
-                System.out.println("Ingrese el nuevo precio de " + productos);
-                int precio = leer.nextInt();               
-                entry = precio;
+            if (entry.equals(modificar)) {
+                System.out.println("Ingrese el nuevo precio: ");
+                int precio = leer.nextInt();
+                productos.put(modificar,precio);
             }
         }
     }
 
-    public void modificarPrecio() {
+    public void eliminarProducto() {
+        
     }
 }
