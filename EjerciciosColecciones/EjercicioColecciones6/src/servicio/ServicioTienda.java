@@ -28,7 +28,7 @@ public class ServicioTienda {
 
         do {
             System.out.println("");
-            System.out.println("---Kiosco Juan Carlos---");
+            System.out.println("---Kiosco ---");
             System.out.println("¿Qué desea hacer?");
             System.out.println("1- Agregar productos.");
             System.out.println("2- Ver todos los productos disponibles.");
@@ -55,7 +55,7 @@ public class ServicioTienda {
                     System.out.println("Fin del programa");
                     break;
                 default:
-                    System.out.println("ERROR. Opcion no valida");
+                    System.out.println("ERROR. Opción no valida");
             }
         } while (opcion < 5);
 
@@ -79,22 +79,36 @@ public class ServicioTienda {
         for (Map.Entry<String, Integer> entry : productos.entrySet()) {
             System.out.println("Producto =" + entry.getKey() + ", Precio =" + entry.getValue());
         }
-        
+
     }
 
     public void modificarPrecio() {
         System.out.println("Ingrese el nombre del producto que desea modificar: ");
         String modificar = leer.next();
         for (Map.Entry<String, Integer> entry : productos.entrySet()) {
-            if (entry.equals(modificar)) {
+            if (entry.getKey().equalsIgnoreCase(modificar)) {
                 System.out.println("Ingrese el nuevo precio: ");
-                int precio = leer.nextInt();
-                productos.put(modificar,precio);
+                int nuevoPrecio = leer.nextInt();
+                productos.put(modificar, nuevoPrecio);
             }
         }
     }
 
     public void eliminarProducto() {
-        
+
+        boolean bandera = false;
+        do {
+            System.out.println("Ingrese el producto que desea eliminar: ");
+            String productoEliminar = leer.next();
+       // el containsKey diferencia entre mayúsculas y minúsculas
+            if (productos.containsKey(productoEliminar)) {
+                productos.remove(productoEliminar);
+                bandera = true;
+            } else {
+                // La clave "productoEliminar" no existe en el mapa
+                System.out.println("El producto ingresado no está en el sistema.");
+            }
+        } while (bandera == false);
+
     }
 }

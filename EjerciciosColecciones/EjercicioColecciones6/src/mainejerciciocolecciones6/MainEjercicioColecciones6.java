@@ -24,8 +24,7 @@ public class MainEjercicioColecciones6 {
      */
     public static void main(String[] args) {
         ServicioTienda servicio = new ServicioTienda();
-        servicio.agregarProducto();
-        servicio.mostrarProductos();
+        servicio.menu();
     }
     
 }
