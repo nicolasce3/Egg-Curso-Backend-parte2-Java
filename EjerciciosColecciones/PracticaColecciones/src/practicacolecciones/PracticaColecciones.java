@@ -87,6 +87,7 @@ public class PracticaColecciones {
         alumnos.put(dni2, nombreAlumno + "Bostero");
         alumnos.put(121542 * 2, "Pepito Grillo"); // agregamos la llave y el valor
         alumnos.put(dni5, "Pepo");
+        alumnos.put(dni5, "Pipi");
         System.out.println("");
         System.out.println("MAPAS: ");
         System.out.println(alumnos);
