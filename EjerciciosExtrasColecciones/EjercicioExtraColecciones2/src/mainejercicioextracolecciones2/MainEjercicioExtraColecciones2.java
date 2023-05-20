@@ -85,24 +85,39 @@ public class MainEjercicioExtraColecciones2 {
 //                    String discoEliminar = leer.next();
 //                    CantanteFamoso cantanteAux = new CantanteFamoso(nombreEliminar,discoEliminar);
                     boolean bandera = false;
-                    
-                    
+
                     Iterator<CantanteFamoso> it = listaCantantes.iterator();
                     while (it.hasNext()) {
                         CantanteFamoso cantanteAux = it.next();
-                        
+
                         if (cantanteAux.getNombreCantante().equalsIgnoreCase(nombreEliminar)) {
                             it.remove();
                             System.out.println("Cantante eliminado.");
                             bandera = true;
                             break;
+
+  //   -Se declara un iterador it para recorrer la lista listaCantantes.
+ //    
+ //    -Dentro del bucle while, se verifica si hay un siguiente elemento en la lista utilizando 
+ //    el método hasNext() del iterador. Si hay un siguiente elemento, el bucle continúa.
+//    
+//     - Se obtiene el siguiente elemento de la lista utilizando el método next() del iterador
+//     y se almacena en la variable cantanteAux de tipo CantanteFamoso.
+//     
+//     -Luego se verifica si el nombre del cantante (cantanteAux.getNombreCantante()) coincide
+//     ignorando mayúsculas y minúsculas con el nombre ingresado por el usuario (nombreEliminar), 
+//     utilizando el método equalsIgnoreCase() que compara cadenas sin importar las diferencias de 
+//     mayúsculas y minúsculas.
+//     
+//     -Si hay una coincidencia, se elimina el cantante utilizando el método remove() del iterador 
+//     y se muestra un mensaje indicando que el cantante fue eliminado.
                         }
                     }
 
-                    if (bandera == false){
+                    if (bandera == false) {
                         System.out.println("Cantante no encontrado.");
                     }
-                    
+
                     break;
                 case 4:
                     System.out.println("Fin del programa.");
