@@ -10,5 +10,11 @@ package entidades;
  * @author Discoxz01
  */
 public class Cliente {
+    private String nombre;
+    private String apellido;
+    private Integer documento;
+    private String mail;
+    private String domicilio;
+    private Integer telefono;
     
 }

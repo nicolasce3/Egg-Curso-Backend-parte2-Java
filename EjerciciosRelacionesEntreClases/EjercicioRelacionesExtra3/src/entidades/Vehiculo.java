@@ -10,5 +10,11 @@ package entidades;
  * @author Discoxz01
  */
 public class Vehiculo {
-    
+    private String marca;
+    private String modelo;
+    private Integer año;
+    private Integer numeroDeMotor;
+    private Integer chasis;
+    private String color;
+    private String tipo;
 }

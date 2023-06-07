@@ -5,10 +5,22 @@
  */
 package entidades;
 
+import java.util.Date;
+
 /**
  *
  * @author Discoxz01
  */
 public class Poliza {
-    
+    private Cliente cliente;
+    private Vehiculo vehiculo;
+    private Integer numeroDePoliza;
+    private Date fechaDeInicio;
+    private Date fechaDeFin;
+    private Integer cantidadCuotas;
+    private String formaDePago;
+    private Integer montoTotalAsegurado;
+    private boolean incluyeGranizo;
+    private Integer montoMaximoGranizo;
+    private String tipoDeCobertura;
 }
