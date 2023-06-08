@@ -5,6 +5,9 @@
  */
 package mainejercicioanimal;
 
+import entidades.Animal;
+import entidades.Gato;
+import entidades.Perro;
 import java.util.ArrayList;
 
 /**
@@ -19,6 +22,11 @@ import java.util.ArrayList;
  *
  * Agregaremos a la lista a cada uno y luego, con un for each, recorreremos la
  * lista llamando al método hacerRuido() de cada ítem.
+ * 
+ * 
+ *  Corregido para que los objetos estén en el paquete entidades 
+ * 
+ * 
  */
 public class MainEjercicioAnimal {
 

@@ -3,32 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mainejercicioanimal;
+package entidades;
 
 /**
  *
  * @author Discoxz01
  */
-public class Animal {
-
-    public void hacerRuido() {
-        System.out.println("Hola");
-    }
-
-}
-
-class Gato extends Animal {
+public class Gato extends Animal {
 
     @Override
     public void hacerRuido() {
         System.out.println("Miau");
-    }
-}
-
-class Perro extends Animal {
-
-    @Override
-    public void hacerRuido() {
-        System.out.println("Guau");
     }
 }
