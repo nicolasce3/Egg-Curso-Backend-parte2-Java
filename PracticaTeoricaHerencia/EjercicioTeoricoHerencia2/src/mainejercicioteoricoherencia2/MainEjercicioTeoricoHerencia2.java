@@ -5,6 +5,11 @@
  */
 package mainejercicioteoricoherencia2;
 
+import entidades.Gato;
+import entidades.Gecko;
+import entidades.Vaca;
+
+
 /**
  *
  * @author Discoxz01
@@ -15,7 +20,13 @@ public class MainEjercicioTeoricoHerencia2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      Perro interfaz = new Interfaz() {};
+        Gato gato = new Gato();
+        Vaca vaca = new Vaca(); 
+        Gecko gecko = new Gecko();
+        gato.sonidoAnimal();
+        vaca.sonidoAnimal();
+        gecko.sonidoAnimal();
+        
+        
     }
-    
 }

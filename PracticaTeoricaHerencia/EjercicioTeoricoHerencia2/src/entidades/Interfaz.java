@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mainejercicioteoricoherencia2;
+package entidades;
 
 /**
  *
  * @author Discoxz01
  */
 public interface Interfaz {
-    public abstract void codear();
+     public void sonidoAnimal();
 }
