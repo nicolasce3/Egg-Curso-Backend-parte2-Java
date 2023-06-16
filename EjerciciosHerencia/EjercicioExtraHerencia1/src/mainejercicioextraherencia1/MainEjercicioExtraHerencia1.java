@@ -5,6 +5,9 @@
  */
 package mainejercicioextraherencia1;
 
+import entidades.Alquiler;
+import servicio.ServicioAlquiler;
+
 /**
  *
  * En un puerto se alquilan amarres para barcos de distinto tipo. Para cada
@@ -31,7 +34,18 @@ public class MainEjercicioExtraHerencia1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ServicioAlquiler servicio = new ServicioAlquiler();
+        Alquiler alquiler = servicio.crearAlquiler();
+        
+        long diferenciaMiliSegundos = alquiler.getFechaDeDevolucion().getTime() - alquiler.getFechaDeAlquiler().getTime();
+        long diferenciaDias =  diferenciaMiliSegundos / (1000 * 60 * 60 * 24);
+        
+        // calcular alquiler
+        int alquilerNormal = (int) diferenciaDias * (10*alquiler.getBarco().getEslora());
+        
+        
+        
+        System.out.println(alquiler);
     }
 
 }

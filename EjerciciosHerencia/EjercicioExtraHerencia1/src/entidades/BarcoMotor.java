@@ -11,5 +11,28 @@ package entidades;
  */
 public class BarcoMotor extends Barco {
     protected Integer potenciaCv;
+
+
+
+    public BarcoMotor(Integer matricula, Integer eslora, Integer anioDeFabricacion, Integer potenciaCv) {
+        super(matricula, eslora, anioDeFabricacion);
+        this.potenciaCv = potenciaCv;
+    }
+
+    public BarcoMotor() {
+    }
+
+    public Integer getPotenciaCv() {
+        return potenciaCv;
+    }
+
+    public void setPotenciaCv(Integer potenciaCv) {
+        this.potenciaCv = potenciaCv;
+    }
+
+    @Override
+    public String toString() {
+        return "BarcoMotor{" + "matricula=" + matricula + ", eslora=" + eslora + ", anioDeFabricacion=" + anioDeFabricacion + ", potenciaCv=" + potenciaCv + '}';
+    }
     
 }

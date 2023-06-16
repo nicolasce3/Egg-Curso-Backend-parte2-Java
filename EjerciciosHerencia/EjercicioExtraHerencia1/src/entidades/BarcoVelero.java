@@ -17,7 +17,7 @@ public class BarcoVelero extends Barco{
 
   
 
-    public BarcoVelero(Integer numeroMastiles, Integer matricula, Integer eslora, Integer anioDeFabricacion) {
+    public BarcoVelero(Integer matricula, Integer eslora, Integer anioDeFabricacion, Integer numeroMastiles) {
         super(matricula, eslora, anioDeFabricacion);
         this.numeroMastiles = numeroMastiles;
     }
@@ -28,6 +28,11 @@ public class BarcoVelero extends Barco{
 
     public void setNumeroMastiles(Integer numeroMastiles) {
         this.numeroMastiles = numeroMastiles;
+    }
+
+    @Override
+    public String toString() {
+        return "BarcoVelero{" + "matricula=" + matricula + ", eslora=" + eslora + ", anioDeFabricacion=" + anioDeFabricacion + ", numeroMastiles=" + numeroMastiles + '}';
     }
     
     
