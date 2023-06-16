@@ -6,6 +6,9 @@
 package mainejercicioextraherencia1;
 
 import entidades.Alquiler;
+import entidades.BarcoLujo;
+import entidades.BarcoMotor;
+import entidades.BarcoVelero;
 import servicio.ServicioAlquiler;
 
 /**
@@ -37,14 +40,30 @@ public class MainEjercicioExtraHerencia1 {
         ServicioAlquiler servicio = new ServicioAlquiler();
         Alquiler alquiler = servicio.crearAlquiler();
         
+        
+        
+        // calcular días de ocupación
         long diferenciaMiliSegundos = alquiler.getFechaDeDevolucion().getTime() - alquiler.getFechaDeAlquiler().getTime();
-        long diferenciaDias =  diferenciaMiliSegundos / (1000 * 60 * 60 * 24);
-        
+        long diferenciaDias = diferenciaMiliSegundos / (1000 * 60 * 60 * 24);
+
         // calcular alquiler
-        int alquilerNormal = (int) diferenciaDias * (10*alquiler.getBarco().getEslora());
-        
-        
-        
+        int alquilerNormal = (int) diferenciaDias * (10 * alquiler.getBarco().getEslora());
+        int alquilerEspecial = 0;
+        if (alquiler.getBarco() instanceof BarcoVelero) {
+            BarcoVelero velero = (BarcoVelero) alquiler.getBarco();
+            alquilerEspecial = alquilerNormal + velero.getNumeroMastiles();
+        } else if (alquiler.getBarco() instanceof BarcoMotor) {
+            BarcoMotor barcoMotor = (BarcoMotor) alquiler.getBarco();
+            alquilerEspecial = alquilerNormal + barcoMotor.getPotenciaCv();
+        } else if (alquiler.getBarco() instanceof BarcoLujo){
+            BarcoLujo barcoLujo = (BarcoLujo) alquiler.getBarco();
+            alquilerEspecial = alquilerNormal + barcoLujo.getNumeroCamarotes() +barcoLujo.getPotenciaCv();
+        }
+        System.out.println("Dias: " + diferenciaDias);
+        System.out.println("");
+        System.out.println("El valor total del alquiler es: " + alquilerEspecial);
+        System.out.println("");
+        System.out.println("Datos del barco: ");
         System.out.println(alquiler);
     }
 
