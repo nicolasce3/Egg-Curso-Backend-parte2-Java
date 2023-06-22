@@ -59,11 +59,11 @@ public class MainEjercicioExtraHerencia1 {
             BarcoLujo barcoLujo = (BarcoLujo) alquiler.getBarco();
             alquilerEspecial = alquilerNormal + barcoLujo.getNumeroCamarotes() +barcoLujo.getPotenciaCv();
         }
-        System.out.println("Dias: " + diferenciaDias);
+        System.out.println("Dias ocupados: " + diferenciaDias);
         System.out.println("");
         System.out.println("El valor total del alquiler es: " + alquilerEspecial);
         System.out.println("");
-        System.out.println("Datos del barco: ");
+        System.out.println("Datos del barco: \n");
         System.out.println(alquiler);
     }
 
